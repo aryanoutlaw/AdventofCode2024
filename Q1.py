@@ -17,7 +17,8 @@ for i in range(len(left_list)):
     res += abs(left_list[i] - right_list[i])
 print(res)
 
-# getting the similarity score
+### PART 2: Getting the Similarity Score ###
+
 right_list_dict = {}
 
 for num in right_list:
@@ -37,30 +38,30 @@ print(similarity_score)
 
 ### CHATGPT VERSION ###
 
-'''with open('Q1_input.txt', 'r') as file:
-    # Parse input into two lists
-    left_list = []
-    right_list = []
+# with open('Q1_input.txt', 'r') as file:
+#     # Parse input into two lists
+#     left_list = []
+#     right_list = []
     
-    for line in file:
-        left, right = map(int, line.split())
-        left_list.append(left)
-        right_list.append(right)
+#     for line in file:
+#         left, right = map(int, line.split())
+#         left_list.append(left)
+#         right_list.append(right)
 
-# Sort both lists
-left_list.sort()
-right_list.sort()
+# # Sort both lists
+# left_list.sort()
+# right_list.sort()
 
-# Calculate the absolute difference sum
-res = sum(abs(left - right) for left, right in zip(left_list, right_list))
-print("Absolute Difference Sum:", res)
+# # Calculate the absolute difference sum
+# res = sum(abs(left - right) for left, right in zip(left_list, right_list))
+# print("Absolute Difference Sum:", res)
 
-# Calculate the similarity score
-from collections import Counter
+# # Calculate the similarity score
+# from collections import Counter
 
-# Use Counter to efficiently count occurrences in right_list
-right_list_dict = Counter(right_list)
+# # Use Counter to efficiently count occurrences in right_list
+# right_list_dict = Counter(right_list)
 
-# Compute similarity score
-similarity_score = sum(num * right_list_dict.get(num, 0) for num in left_list)
-print("Similarity Score:", similarity_score)'''
+# # Compute similarity score
+# similarity_score = sum(num * right_list_dict.get(num, 0) for num in left_list)
+# print("Similarity Score:", similarity_score)
